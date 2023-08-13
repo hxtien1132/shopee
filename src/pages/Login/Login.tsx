@@ -36,6 +36,7 @@ export default function Login() {
         setIsAuthenticated(true)
         setProfile(data.data.data.user)
         navigate('/')
+        console.log('login', data)
       },
       onError: (error) => {
         if (isAxiosUnprocessableEntityError<ErrorResponse<FormData>>(error)) {

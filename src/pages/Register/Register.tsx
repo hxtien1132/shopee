@@ -42,6 +42,7 @@ export default function Register() {
         setIsAuthenticated(true)
         setProfile(data.data.data.user)
         navigate('/')
+        console.log('register', data)
       },
       onError: (error) => {
         if (isAxiosUnprocessableEntityError<ErrorResponse<Omit<FormData, 'confirm_password'>>>(error)) {
